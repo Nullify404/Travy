@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signup_bg"
+    tools:context="com.nullify.travi.ConfirmUsername">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="215dp"
+            android:layout_height="215dp"
+            android:id="@+id/pro_frame"
+            android:layout_alignBottom="@+id/confirm_pro_edit_btn"
+            android:background="@drawable/profile_avatar_bg"
+            android:layout_centerHorizontal="true">
+        <TextView
+            android:background="@drawable/avatar"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:id="@+id/confirm_prof_pic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            />
+            <ProgressBar
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                android:id="@+id/confirm_profile_loading"/>
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/confirm_pro_edit_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignEnd="@+id/pro_frame"
+            android:layout_alignRight="@+id/pro_frame"
+            android:layout_centerVertical="true"
+            android:background="@drawable/edit_btn" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text_input_confirm_username"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextLabelLogin"
+            android:layout_below="@+id/pro_frame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/confirm_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#000"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:textColorHint="#000"
+                android:textStyle="bold" />
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:id="@+id/confirm_btn_proceed"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/signinbg_login"
+                android:text="PROCEED" />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
+

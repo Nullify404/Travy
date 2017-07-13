@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nullify.travi.ExploreActivity">
+    <com.google.android.gms.maps.MapView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/explore_progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/explore_loc_info"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#7e333333"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/explore_locname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Mylatty"
+            android:textColor="#ffff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/explore_district"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:text="Kasaragod"
+            android:textColor="#ffff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/explore_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@+id/explore_district"
+            android:layout_toRightOf="@+id/explore_district"
+            android:text="Kerala"
+            android:textColor="#ffff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/explore_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:text="Indaia"
+            android:textColor="#ffff"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/explore_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="80dp"
+            android:layout_toRightOf="@+id/explore_country"
+            android:text="671319"
+            android:textColor="#ffff"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/explore_proceed"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/explore_proceed_button"
+            android:text="proceed"
+            android:textSize="9dp" />
+
+        <ImageButton
+            android:id="@+id/explore_cross"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/explore_cross" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_height="50dp">
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/explore_search_loc"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/explore_edittext"
+            android:hint="Search for a place you want to travel"
+            android:imeOptions="actionDone"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            android:textSize="11dp" />
+
+        <Button
+            android:id="@+id/explore_search_button"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/explore_search_loc"
+            android:layout_toRightOf="@+id/explore_search_loc"
+            android:background="@drawable/explore_search_button"
+            android:text="Search"
+            android:textColor="#fff"
+            android:textSize="11dp" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:background="#fff"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/explore_network_warning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/explore_net_warn_image"
+            android:layout_width="176dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="200dp"
+            android:background="@drawable/noconnection"/>
+        <TextView
+            android:layout_below="@+id/explore_net_warn_image"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="wake up your connection!"
+            android:textSize="17dp"
+            android:textColor="#212121"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/explore_net_warn_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Your internet seems too low to reach\nour server😞"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/explore_root"
+        android:layout_height="match_parent"></FrameLayout>
+</RelativeLayout>

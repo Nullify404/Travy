@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "515294850081",
+    "firebase_url": "https://travi-114c6.firebaseio.com",
+    "project_id": "travi-114c6",
+    "storage_bucket": "travi-114c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515294850081:android:415c33821c057226",
+        "android_client_info": {
+          "package_name": "com.nullify.travi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515294850081-nne8fmdd3na3pd9frri2e38olgj36sdo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7oUl9pab5Sf1ZrY4bVJCasxTxGvU1MNg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context="com.nullify.travi.LoginActivity">
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fbloginButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="333dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="300dp"
+        android:theme="@style/TextLabelLogin">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/login_edittext_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000"
+            android:hint="EMAIL"
+            android:inputType="textEmailAddress"
+            android:textColorHint="#000"
+            android:textStyle="bold" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout_password"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_input_layout_email"
+        android:layout_alignStart="@+id/text_input_layout_email"
+        android:layout_alignTop="@+id/text_input_layout_email"
+        android:layout_marginTop="61dp"
+        android:theme="@style/TextLabelLogin">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/login_edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000"
+            android:hint="PASSWORD"
+            android:inputType="textPassword"
+            android:textColorHint="#000"
+            android:textStyle="bold" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:text="SIGN IN"
+        android:background="@drawable/signinbg_login"
+        android:layout_below="@+id/text_input_layout_password"
+        android:layout_alignRight="@+id/text_input_layout_password"
+        android:layout_alignEnd="@+id/text_input_layout_password"
+        android:layout_marginTop="29dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/login_button_signin" />
+    <Button
+        android:id="@+id/login_button_signup"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:text="SIGN UP"
+        android:textColor="#fff"
+        android:background="@drawable/signupbg_login"
+        android:layout_below="@+id/text_input_layout_password"
+        android:layout_alignLeft="@+id/text_input_layout_password"
+        android:layout_marginTop="29dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/login_fb"
+        android:layout_alignStart="@+id/login_fb"
+        android:layout_below="@+id/login_button_signup"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/line" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR CONNECT WITH"
+        android:textColor="#000"
+        android:textSize="12dp"
+        android:id="@+id/login_or_text"
+        android:layout_marginBottom="17dp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/line"
+        android:id="@+id/imageView2"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignRight="@+id/login_ggl"
+        android:layout_alignEnd="@+id/login_ggl" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:background="@drawable/fb_login_button"
+        android:text="FACEBOOK"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/login_fb" />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:text="GOOGLE"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:background="@drawable/ggl_login_button"
+        android:layout_marginBottom="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/login_ggl" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/travylogo" />
+</RelativeLayout>

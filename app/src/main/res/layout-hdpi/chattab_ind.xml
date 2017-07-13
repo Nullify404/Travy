@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ListView
+        android:divider="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/individual_chat_list"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:id="@+id/chat_warning">
+        <ImageView
+            android:background="@drawable/lonely"
+            android:layout_centerHorizontal="true"
+            android:layout_width="200dp"
+            android:id="@+id/chat_warning_image"
+            android:layout_centerVertical="true"
+            android:layout_height="230dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_warning_image"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Looks like there is no one on your chat list\nstart exploring"
+            android:layout_marginTop="50dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="#fff"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/chat_network_warning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/chat_net_warn_image"
+            android:layout_width="176dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="200dp"
+            android:background="@drawable/noconnection"/>
+        <TextView
+            android:layout_below="@+id/chat_net_warn_image"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="wake up your connection!"
+            android:textSize="17dp"
+            android:textColor="#212121"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chat_net_warn_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Your internet seems too low to reach\nour server😞"/>
+    </RelativeLayout>
+
+</RelativeLayout>

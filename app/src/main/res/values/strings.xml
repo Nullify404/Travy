@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Travy</string>
+    <string name="facebook_app_id">219321838587596</string>
+    <string name="fb_login_protocol_scheme">fb219321838587596</string>
+    <string name="title_activity_tabed">TabedActivity</string>
+    <string name="undo">Undo</string>
+    <string name="undoall">Undo All</string>
+
+</resources>

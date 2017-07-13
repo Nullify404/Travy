@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.NoActionBar2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">#FFF3F3F3</item>
+        <item name="android:statusBarColor">#e0e0e0</item>
+    </style>
+    <style name="TextLabelLogin" parent="TextAppearance.AppCompat">
+        <item name="android:textColorHint">#b4000000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="colorAccent">#000</item>
+        <item name="colorControlNormal">#000</item>
+        <item name="colorControlActivated">#000</item>
+    </style>
+    <style name="AppTheme.NoActionBar3" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimaryDark">#FFF3F3F3</item>
+        <item name="android:statusBarColor">#e0e0e0</item>
+    </style>
+</resources>

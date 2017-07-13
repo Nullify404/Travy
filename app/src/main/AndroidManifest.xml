@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nullify.travi">
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".travi"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/applogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/applogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDZjyzcUnw5YmmYgFDdWx3u23koNC-aQWU" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:windowSoftInputMode="adjustPan" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ConfirmActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".ConfirmUsername"
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:windowSoftInputMode="adjustPan" />
+
+        <service
+            android:name=".NewTravies"
+            android:enabled="true" />
+
+        <receiver android:name=".RestartServiceReceiver">
+            <intent-filter>
+                <action android:name="YouWillNeverKillMe" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".NetworkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.con." />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_tabed"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".MessageActivity"
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".NotificationsActivity"
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateGroupActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MessageActivityGroup"
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".AddmemberActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".GroupDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".MessageProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".FollowersActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".FollowingActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".FollowProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar3" />
+        <activity android:name=".AboutActivity"
+            android:theme="@style/AppTheme.NoActionBar2"></activity>
+    </application>
+
+</manifest>

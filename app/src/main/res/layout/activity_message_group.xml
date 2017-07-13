@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/chat_group_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#E0E0E0"
+        android:elevation="5dp"
+        android:gravity="center_vertical|center_horizontal"
+
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:background="@drawable/avatar"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/message_other_propic"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center" />
+            <RelativeLayout
+                android:id="@+id/group_details"
+                android:layout_width="200dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/message_other_propic"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/messages_user_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/group_name"
+                android:textColor="#212121" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <GridView
+        android:id="@+id/messages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/input_parent"
+        android:layout_below="@id/chat_group_toolbar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:scrollbars="none"
+        android:transcriptMode="normal"
+        android:verticalSpacing="5dp" />
+
+    <RelativeLayout
+        android:id="@+id/input_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#fff">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/messages_input"
+            android:layout_width="220dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Your message here..."
+            android:imeOptions="actionSend"
+            android:paddingLeft="10dp"
+            android:textColor="#000"
+            android:textSize="11dp" />
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/messages_input"
+            android:background="#9e9e9e"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <Button
+            android:id="@+id/send"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/messages_input"
+            android:layout_toRightOf="@+id/messages_input"
+            android:background="@drawable/home_explore_button_bg"
+            android:text="send"
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/send_love"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_toEndOf="@+id/messages_input"
+            android:layout_toRightOf="@+id/messages_input"
+            android:background="@drawable/love" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/group_list_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="75dp">
+    <RelativeLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="65dp">
+
+    <TextView
+        android:id="@+id/create_group_image"
+        android:layout_width="50dp"
+        android:background="@drawable/avatar"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/create_group_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/create_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="27dp"
+            android:layout_marginStart="27dp"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/create_group_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/create_group_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/create_group_image"
+            android:layout_toRightOf="@+id/create_group_image"
+            android:text=""
+            android:textColor="#000"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+    <RadioButton
+        android:focusable="false"
+        android:background="@drawable/radiobutton"
+        android:id="@+id/radioButton_creategroup"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:button="@null"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>
