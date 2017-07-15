@@ -1,4 +1,4 @@
-# Travy Android App
+# Travy Travel App
 
 ![poster](https://raw.githubusercontent.com/Nullify404/Travy/master/travyposter.jpg)
 
